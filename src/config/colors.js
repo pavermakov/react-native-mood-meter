@@ -3,4 +3,5 @@ export default {
   gray: '#9A9EAB',
   darkGray: '#5D535E',
   yellow: '#DFE166',
+  transparent: 'transparent',
 };
