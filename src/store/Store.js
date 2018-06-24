@@ -3,14 +3,24 @@ import { screens } from '../config';
 
 const initialState = {
   currentScreen: screens.mood,
+  currentMood: null,
 };
 
 const StoreContext = React.createContext(initialState);
 
 class Store extends Component {
+  setCurrentScreen = (nextScreen) => {
+    this.setState({ currentScreen: nextScreen });
+  };
+
+  setCurrentMood = (nextMood = null) => {
+    this.setState({ currentMood: nextMood });
+  };
+
   state = {
     ...initialState,
-    hello: 1,
+    setCurrentScreen: this.setCurrentScreen,
+    setCurrentMood: this.setCurrentMood,
   };
 
   render() {

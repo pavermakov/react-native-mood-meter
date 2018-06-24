@@ -1,14 +1,16 @@
 import React, { Component } from 'react';
-import { Text, View } from 'react-native';
-import s from './MoodScreen.styles';
+import { StoreContext } from '../../store';
+import { Mood } from '../../containers/Mood';
 
-const MoodScreen = ({  }) => {
-  return (
-    <View style={s.container}>
-      <Text> MoodScreen component </Text>
-    </View>
-  );
-}
+const MoodScreen = () => (
+  <StoreContext.Consumer>
+    {({ currentMood, setCurrentMood }) => (
+      <Mood
+        currentMood={currentMood}
+        setCurrentMood={setCurrentMood}
+      />
+    )}
+  </StoreContext.Consumer>
+);
 
 export default MoodScreen;
-
