@@ -4,12 +4,10 @@ export default StyleSheet.create({
   container: {
     flex: 1,
     width: '100%',
-  },
-  header: {
-    flexGrow: 0,
-    paddingTop: 60,
+    justifyContent: 'center',
+    alignItems: 'center',
   },
   body: {
-    flexGrow: 1,
+    transform: [{ rotateZ: '-90deg' }],
   },
 });
