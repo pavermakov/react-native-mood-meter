@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { StyleSheet, Text, View, SafeAreaView } from 'react-native';
 import { Store } from './store';
 import { Navigator } from './navigator';
+import { TabBar } from './containers/TabBar';
 import { colors } from './config';
 
 class App extends Component {
@@ -10,7 +11,7 @@ class App extends Component {
       <Store>
         <SafeAreaView style={styles.container}>
           <Navigator />
-          {/* tabbar */}
+          <TabBar />
         </SafeAreaView>
       </Store>
     );
