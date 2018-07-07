@@ -51,4 +51,6 @@ export default {
   ],
   MAX_MOOD_PICKER_WIDTH: 300,
   MOOD_PICKER_ITEM_EXTRA_SPACE: 50,
+  TIME_FORMAT: 'YYYY-DD-MM[T]HH:mm:ss',
+  STORAGE_KEY: 'moods',
 };
