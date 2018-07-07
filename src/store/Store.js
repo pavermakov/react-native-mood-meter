@@ -1,12 +1,11 @@
 import React, { Component } from 'react';
 import { AsyncStorage } from 'react-native';
-import moment from 'moment';
 import { screens, constants } from '../config';
 
 const initialState = {
   currentScreen: screens.mood,
   currentMood: null,
-  savedMoods: {},
+  savedMoods: [],
 };
 
 const StoreContext = React.createContext(initialState);
@@ -37,15 +36,15 @@ class Store extends Component {
   };
 
   saveMood = () => {
-    const date = moment().format(constants.TIME_FORMAT);
-    const nextSavedMoods = {
-      ...this.state.savedMoods,
-      [date]: this.state.currentMood,
-    };
+    const nextSavedMoods = [...this.state.savedMoods, this.state.currentMood];
 
     AsyncStorage.setItem(constants.STORAGE_KEY, JSON.stringify(nextSavedMoods))
       .then(() => {
-        this.setState({ savedMoods: nextSavedMoods });
+        this.setState({
+          savedMoods: nextSavedMoods,
+          currentScreen: screens.stats,
+          currentMood: null,
+        });
       })
       .catch(console.error)
   };
