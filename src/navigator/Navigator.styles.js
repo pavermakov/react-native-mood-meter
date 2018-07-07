@@ -7,7 +7,7 @@ export default StyleSheet.create({
   },
   header: {
     flexGrow: 0,
-    paddingTop: 60,
+    paddingTop: 30,
   },
   body: {
     flexGrow: 1,

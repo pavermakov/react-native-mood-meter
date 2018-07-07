@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import { View, Text, Dimensions } from 'react-native';
+import { View, Dimensions } from 'react-native';
 import { StoreContext } from '../../store';
 import { MoodPicker } from '../../components/MoodPicker';
+import { Button } from "../../components/Button";
 import { constants } from '../../config';
 import s from './Mood.styles';
 
@@ -18,7 +19,7 @@ class Mood extends Component {
   render() {
     return (
       <StoreContext.Consumer>
-        {({ currentMood, setCurrentMood }) => (
+        {({ currentMood, setCurrentMood, saveMood }) => (
           <View style={s.container}>
             <MoodPicker
               currentMood={currentMood}
@@ -26,6 +27,14 @@ class Mood extends Component {
               width={this.MOOD_PICKER_WIDTH}
               onMoodSelect={setCurrentMood}
             />
+
+            <View style={s.controls}>
+              <Button
+                text="next"
+                isDisabled={currentMood === null}
+                onPress={saveMood}
+              />
+            </View>
           </View>
         )}
       </StoreContext.Consumer>

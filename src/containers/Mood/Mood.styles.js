@@ -6,4 +6,7 @@ export default StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
   },
+  controls: {
+    paddingVertical: 15,
+  },
 });

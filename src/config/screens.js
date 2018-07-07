@@ -4,12 +4,12 @@ import { MoodScreen } from '../screens/MoodScreen';
 
 export default {
   mood: {
-    pageTitle: 'How are you feeling today?',
+    pageTitle: 'How are you feeling?',
     navTitle: 'Mood',
     component: <MoodScreen />,
   },
   stats: {
-    pageTitle: 'stats title',
+    pageTitle: 'Your stats',
     navTitle: 'Stats',
     component: <View><Text>stats screen</Text></View>,
   },
