@@ -1,6 +1,7 @@
 import React from 'react';
 import { Text, View } from 'react-native';
 import { MoodScreen } from '../screens/MoodScreen';
+import { StatsScreen } from '../screens/StatsScreen';
 
 export default {
   mood: {
@@ -11,6 +12,6 @@ export default {
   stats: {
     pageTitle: 'Your stats',
     navTitle: 'Stats',
-    component: <View><Text>stats screen</Text></View>,
+    component: <StatsScreen />,
   },
 };

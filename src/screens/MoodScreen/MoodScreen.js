@@ -1,16 +1,6 @@
-import React, { Component } from 'react';
-import { StoreContext } from '../../store';
+import React from 'react';
 import { Mood } from '../../containers/Mood';
 
-const MoodScreen = () => (
-  <StoreContext.Consumer>
-    {({ currentMood, setCurrentMood }) => (
-      <Mood
-        currentMood={currentMood}
-        setCurrentMood={setCurrentMood}
-      />
-    )}
-  </StoreContext.Consumer>
-);
+const MoodScreen = () => <Mood />;
 
 export default MoodScreen;
