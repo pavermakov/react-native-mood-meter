@@ -1,5 +1,5 @@
 import React from 'react';
-import { Text, View, ScrollView, Image } from 'react-native';
+import { View, ScrollView, Image } from 'react-native';
 import { constants } from '../../config';
 import s from './Graph.styles';
 

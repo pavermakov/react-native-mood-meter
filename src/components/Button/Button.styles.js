@@ -14,6 +14,7 @@ export default StyleSheet.create({
   },
   text: {
     color: colors.yellow,
-    fontSize: 30,
+    fontSize: 20,
+    fontWeight: 'bold',
   },
 });
